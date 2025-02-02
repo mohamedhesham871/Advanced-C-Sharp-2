@@ -56,13 +56,27 @@ namespace Advanced_C__2
             #endregion
 
             #region Second-Point
-            List<int> number = new List<int>();
-            number.AddRange([1,2,3,4,5,6,7,8,9,10]);
-            List<int>EvenNumber= Even(number);
+            //List<int> number = new List<int>();
+            //number.AddRange([1,2,3,4,5,6,7,8,9,10]);
+            //List<int>EvenNumber= Even(number);
 
-            foreach(int item in EvenNumber)
-                Console.WriteLine(item);
+            //foreach(int item in EvenNumber)
+            //    Console.WriteLine(item);
             #endregion
+
+            #region Three
+            FixedSizeList<int> list = new FixedSizeList<int>(3);
+            list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            //list.Add(6);//Exception
+            list.GetItem(0);
+            list.GetItem(1);
+            list.GetItem(2);
+           // list.GetItem(3);//Exception
+            #endregion
+
+
         }
     }
 }
