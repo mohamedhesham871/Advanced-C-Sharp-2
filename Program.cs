@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Net.Http.Headers;
 
 namespace Advanced_C__2
 {
@@ -37,6 +38,7 @@ namespace Advanced_C__2
             return list;
         }
         #endregion
+
         #region four
         static public int FirstNonRepeated(Dictionary<char,int> keyValuePairs,string text)
         {
@@ -88,23 +90,48 @@ namespace Advanced_C__2
             #endregion
 
             #region Four
-            Console.WriteLine( "Enter Any String to Find Non-Repeated char");
-            string text= Console.ReadLine();
-            Dictionary<char,int> dic = new Dictionary<char, int>();
-            foreach(char c in text)
-            {
+            //Console.WriteLine( "Enter Any String to Find Non-Repeated char");
+            //string text= Console.ReadLine();
+            //Dictionary<char,int> dic = new Dictionary<char, int>();
+            //foreach(char c in text)
+            //{
 
-                if (dic.ContainsKey(c))
-                    dic[c]++;
-                else
-                dic.Add(c, 1);
-            }
-            Console.WriteLine("Index : "+FirstNonRepeated(dic,text));
-          
+            //    if (dic.ContainsKey(c))
+            //        dic[c]++;
+            //    else
+            //    dic.Add(c, 1);
+            //}
+            //Console.WriteLine("Index : "+FirstNonRepeated(dic,text));
+
 
 
             #endregion
+            #region Five
+            
+            #endregion
 
+            #region Five
+            int Size = int.Parse(Console.ReadLine());
+            int NumberOFQuery =int.Parse(Console.ReadLine());
+            List<int> numbers= new List<int>(Size);
+            for(int i=0;i<Size;i++)
+            {
+                Console.WriteLine("Enter number in List : ");
+               numbers.Add(int.Parse(Console.ReadLine()));
+            }
+            for(int i=0;i<NumberOFQuery;i++)
+            {
+                Console.WriteLine("Enter number to Compare");
+                int x =int.Parse(Console.ReadLine());
+                int countGreater = 0;
+                for(int j=0;j<numbers.Count;j++)
+                {
+                    if(numbers[j]>x)countGreater++;
+                }
+                Console.WriteLine("number is "+countGreater);
+            }
+            
+            #endregion
 
         }
     }
