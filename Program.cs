@@ -37,6 +37,17 @@ namespace Advanced_C__2
             return list;
         }
         #endregion
+        #region four
+        static public int FirstNonRepeated(Dictionary<char,int> keyValuePairs,string text)
+        {
+            foreach (var item in keyValuePairs)
+            {
+                if (item.Value == 1)
+                    return text.IndexOf(item.Key);
+            }
+            return -1;
+        }
+        #endregion
         static void Main(string[] args)
         {
             #region First-Point
@@ -65,15 +76,33 @@ namespace Advanced_C__2
             #endregion
 
             #region Three
-            FixedSizeList<int> list = new FixedSizeList<int>(3);
-            list.Add(3);
-            list.Add(4);
-            list.Add(5);
-            //list.Add(6);//Exception
-            list.GetItem(0);
-            list.GetItem(1);
-            list.GetItem(2);
-           // list.GetItem(3);//Exception
+            // FixedSizeList<int> list = new FixedSizeList<int>(3);
+            // list.Add(3);
+            // list.Add(4);
+            // list.Add(5);
+            // //list.Add(6);//Exception
+            // list.GetItem(0);
+            // list.GetItem(1);
+            // list.GetItem(2);
+            //// list.GetItem(3);//Exception
+            #endregion
+
+            #region Four
+            Console.WriteLine( "Enter Any String to Find Non-Repeated char");
+            string text= Console.ReadLine();
+            Dictionary<char,int> dic = new Dictionary<char, int>();
+            foreach(char c in text)
+            {
+
+                if (dic.ContainsKey(c))
+                    dic[c]++;
+                else
+                dic.Add(c, 1);
+            }
+            Console.WriteLine("Index : "+FirstNonRepeated(dic,text));
+          
+
+
             #endregion
 
 
