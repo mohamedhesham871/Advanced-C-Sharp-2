@@ -147,30 +147,30 @@ namespace Advanced_C__2
             #endregion
 
             #region Seven
-            List<int> num = new List<int>();
-         
-            num.AddRange([9,0,23,32,0,4,4,2,2]);
-            
-            num.Sort();
-            for(int i=1;i<num.Count; i++)
-            {
-                if (num[i] == num[i-1])
-                    num.Remove(num[i]);
-            }
-            foreach (var item in num)
-                Console.WriteLine(item);
+            //List<int> num = new List<int>();
+
+            //num.AddRange([9,0,23,32,0,4,4,2,2]);
+
+            //num.Sort();
+            //for(int i=1;i<num.Count; i++)
+            //{
+            //    if (num[i] == num[i-1])
+            //        num.Remove(num[i]);
+            //}
+            //foreach (var item in num)
+            //    Console.WriteLine(item);
 
             #endregion
 
             #region eight
-            //List<int> number = new List<int>();
-            //number.Add(1);
-            //number.AddRange([2,3,4,5,6,7,8,9,10]);
-            //for (int i = 0; i < number.Count; i++)
-            //    if (number[i] % 2 != 0) number.Remove(number[i]);
+            List<int> number = new List<int>();
+            number.Add(1);
+            number.AddRange([2, 3, 4, 5, 6, 7, 8, 9, 10]);
+            for (int i = 0; i < number.Count; i++)
+                if (number[i] % 2 != 0) number.Remove(number[i]);
 
-            //foreach(var item in number)
-            //    Console.WriteLine(item);
+            foreach (var item in number)
+                Console.WriteLine(item);
             #endregion
 
 
