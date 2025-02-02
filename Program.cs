@@ -50,6 +50,17 @@ namespace Advanced_C__2
             return -1;
         }
         #endregion
+        #region Six
+       static public bool ISpalindrome(int[] arr)
+        {
+            for(int i=0,j=arr.Length-1;i<j;i++,j--)
+            {
+                if (arr[i] != arr[j])
+                    return false;
+            }
+            return true;
+        }
+        #endregion
         static void Main(string[] args)
         {
             #region First-Point
@@ -106,31 +117,33 @@ namespace Advanced_C__2
 
 
             #endregion
-            #region Five
-            
-            #endregion
 
             #region Five
-            int Size = int.Parse(Console.ReadLine());
-            int NumberOFQuery =int.Parse(Console.ReadLine());
-            List<int> numbers= new List<int>(Size);
-            for(int i=0;i<Size;i++)
-            {
-                Console.WriteLine("Enter number in List : ");
-               numbers.Add(int.Parse(Console.ReadLine()));
-            }
-            for(int i=0;i<NumberOFQuery;i++)
-            {
-                Console.WriteLine("Enter number to Compare");
-                int x =int.Parse(Console.ReadLine());
-                int countGreater = 0;
-                for(int j=0;j<numbers.Count;j++)
-                {
-                    if(numbers[j]>x)countGreater++;
-                }
-                Console.WriteLine("number is "+countGreater);
-            }
-            
+            //int Size = int.Parse(Console.ReadLine());
+            //int NumberOFQuery =int.Parse(Console.ReadLine());
+            //List<int> numbers= new List<int>(Size);
+            //for(int i=0;i<Size;i++)
+            //{
+            //    Console.WriteLine("Enter number in List : ");
+            //   numbers.Add(int.Parse(Console.ReadLine()));
+            //}
+            //for(int i=0;i<NumberOFQuery;i++)
+            //{
+            //    Console.WriteLine("Enter number to Compare");
+            //    int x =int.Parse(Console.ReadLine());
+            //    int countGreater = 0;
+            //    for(int j=0;j<numbers.Count;j++)
+            //    {
+            //        if(numbers[j]>x)countGreater++;
+            //    }
+            //    Console.WriteLine("number is "+countGreater);
+            //}
+
+            #endregion
+
+            #region Six
+            int[] number = { 1, 2, 3, 4, 3, 2, 1 };
+            Console.WriteLine(ISpalindrome(number));
             #endregion
 
         }
